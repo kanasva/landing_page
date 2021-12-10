@@ -1,0 +1,141 @@
+/* style of landing page */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Source+Sans+3:wght@300&display=swap');
+
+* {
+    color: black;
+}
+
+
+h2 {
+    font-family: 'Lora', serif;
+    text-align: center;
+    margin: 20px auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #FFCED5;
+    margin: 0;
+}
+
+
+#header {
+    background-color: #66262F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Lora', serif;
+    padding: 0 20px;
+}
+
+#header a {
+    color: white;
+}
+
+#header-img {
+    width: 280px;
+}
+
+#nav-list {
+    list-style: none;
+    text-decoration: none;
+}
+
+#nav-list li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+@media (max-width: 700px) {
+    #header {
+        display: grid;
+        grid-template-areas: "header-img"
+                             "nav-bar";
+        justify-content: center;
+    }
+    #header-img {
+        grid-area: header-img;
+        padding: 10px;
+        margin: auto;
+    }
+    #nav-bar {
+        grid-area: nav-bar;
+        /* padding-bottom: 10px; */
+    }
+
+    #nav-list {
+        padding: 0 0 10px 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 330px) {
+    #header-img {
+        width: 80vw;
+    }
+
+    #nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+main {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 8px;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+#video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 15px;
+}
+
+
+
+#contact {
+    text-align: center;
+}
+
+#form {
+    text-align: center;
+    margin: 10px auto 30px auto;
+}
+
+#email::placeholder {
+    text-align: center;
+}
+
+#submit {
+    padding: 0 10px;
+}
+
+#price-list {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.level {
+    border: 1px solid #302C1E;
+    width: 30%;
+    margin: 8px;
+}
+
+@media (max-width: 570px) {
+    .level {
+        min-width: 57%;
+    }
+}
